@@ -11,7 +11,7 @@ import { Observable } from 'rxjs/Observable';
 export class ProductService {
 
   constructor(private _http: Http) { }
-  private _albumUrl: string = '../assets/album.json'
+  private _albumUrl = '../assets/album.json'
   getAlbum(id: number): Observable<any> {
     return this._http.get(this._albumUrl).map((response) => <any>response.json());
 
